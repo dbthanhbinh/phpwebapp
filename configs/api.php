@@ -1,4 +1,8 @@
 <?php
+include('./config.php');
+
+$cur_url = CHATBOT_API_HOST . ':' . CHATBOT_API_PORT . '/chat';
+
 if (isset($_POST['question'])) {
   $curl = curl_init();
   $str = $_POST['question'];
@@ -11,7 +15,7 @@ if (isset($_POST['question'])) {
   $postdata = json_encode($postdata);
 
   curl_setopt_array($curl, array(
-    CURLOPT_URL => 'http://34.126.179.215:22333/chat',
+    CURLOPT_URL => $cur_url,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,

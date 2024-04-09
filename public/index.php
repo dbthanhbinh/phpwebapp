@@ -9,10 +9,6 @@
 </head>
 <body>
   <div class="container">
-    <div class="chatbot-icons" id="chatbot-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png" alt="Chatbot Logo">
-    </div>
-
     <div class="header">
       <img src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png" alt="Chatbot Logo">
       <h1> <span style="color: skyblue;padding-right: 1rem;"> Welcome to Chatbot! </span></h1>
@@ -25,32 +21,40 @@
     </div>
 
     <?php
-    $newdate = date('Y-m-d');
-    ?>
-
-    <div class="chatbot-box" id="chatbot-box">
-      <div class="header">
+    include('../configs/config.php');
+    if (ENABLE_CHATBOT) {
+      $newdate = date('Y-m-d');
+      ?>
+      <div class="chatbot-icons" id="chatbot-icons">
         <img src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png" alt="Chatbot Logo">
-        <h3> <span style="color: skyblue;padding-right: 1rem;"> How can i help you! </span></h3>
       </div>
-      <div class="chat-box">
-        <div class="messages">
-          <div class="message sent">
-            <div class="avatar"><img src="https://randomuser.me/api/portraits/women/24.jpg" alt="User Avatar"></div>
-            <div class="text">How can i help you!</div>
-            <div class="time"><?= $newdate ?></div>
-          </div>
-          <div class="ajax-response">
-          </div>
+
+      <div class="chatbot-box" id="chatbot-box">
+        <div class="header">
+          <img src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png" alt="Chatbot Logo">
+          <h3> <span style="color: skyblue;padding-right: 1rem;"> How can i help you! </span></h3>
         </div>
-        <form action="" method="post" id="form1">
-          <div class="input-box">
-            <input type="text" class="message-input" name="question" id="question" placeholder="Type your message..." required>
-            <button type="submit" class="send-button" name="search" id="search"><i class="fa fa-paper-plane"></i><img src="./img/dots-loading.gif" class="dot-img hide"> </button>
+        <div class="chat-box">
+          <div class="messages">
+            <div class="message sent">
+              <div class="avatar"><img src="https://randomuser.me/api/portraits/women/24.jpg" alt="User Avatar"></div>
+              <div class="text">How can i help you!</div>
+              <div class="time"><?= $newdate ?></div>
+            </div>
+            <div class="ajax-response">
+            </div>
           </div>
-        </form>
-      </div>  
-    <div>
+          <form action="" method="post" id="form1">
+            <div class="input-box">
+              <input type="text" class="message-input" name="question" id="question" placeholder="Type your message..." required>
+              <button type="submit" class="send-button" name="search" id="search"><i class="fa fa-paper-plane"></i><img src="./img/dots-loading.gif" class="dot-img hide"> </button>
+            </div>
+          </form>
+        </div>  
+      <div>
+    <?php
+    }
+    ?>
 
 
   </div>

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var requestUrl = 'http://localhost/chat_bot/configs/api.php';
 
     $(".messages").animate({
       scrollTop: $('.messages').get(0).scrollHeight
@@ -27,11 +28,15 @@ $(document).ready(function () {
       $("#form1").submit(function (event) {
         event.preventDefault();
         $.ajax({
-          url: 'http://localhost/chat_bot/config/api.php',
+          url: requestUrl,
           type: 'POST',
           data: $(this).serialize(),
           beforeSend: function() {
-            let currentDate = new Date().toLocaleDateString();
+            let d = new Date();
+            let day = d.getDate();
+            let month = d.getMonth();
+            let year = d.getFullYear();
+            let currentDate = year + '-' + month + '-' + day;
 
             let question = document.getElementById('question').value;
             var msgSend = '';

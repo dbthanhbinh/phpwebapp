@@ -1,0 +1,4 @@
+<?php
+const ENABLE_CHATBOT = true;
+const CHATBOT_API_HOST = '35.198.212.211';
+const CHATBOT_API_PORT = '22333';
