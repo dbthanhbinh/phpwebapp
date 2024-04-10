@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "7fd3dd2e-95aa-4855-9b63-5d2b564ea1a4",
+		"name": "240400 techjdi chatbot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "718205"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/ping",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/chat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"m\": \"hi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/chat",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"chat"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "chat",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://34.126.179.215:22333/chat",
+							"protocol": "http",
+							"host": [
+								"34",
+								"126",
+								"179",
+								"215"
+							],
+							"port": "22333",
+							"path": [
+								"chat"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Apr 2024 09:41:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "581"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Doloribus fugit rem ut magni eligendi, inventore facere delectus asperiores ratione beatae commodi distinctio vero tenetur quasi, consectetur est labore voluptas tempore delectus, quaerat dolore sapiente numquam excepturi. Reiciendis unde animi debitis ab quam laudantium eligendi, similique ab voluptatum id in obcaecati numquam, earum expedita dicta porro qui in voluptatem, quia nemo eius minus adipisci nihil iste illum. Minima facere eligendi repellendus, impedit labore aperiam doloribus, laboriosam tempora sapiente cupiditate assumenda natus nam nesciunt illum accusantium?"
+				}
+			]
+		}
+	]
+}
