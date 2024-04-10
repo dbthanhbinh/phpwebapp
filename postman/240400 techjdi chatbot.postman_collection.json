@@ -47,7 +47,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"m\": \"hi\"\n}",
+					"raw": "{\n    \"m\": \"What is Tech JDI?\"\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -66,20 +66,15 @@
 			},
 			"response": [
 				{
-					"name": "chat",
+					"name": "/chat lorem",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://34.126.179.215:22333/chat",
-							"protocol": "http",
+							"raw": "{{HOST}}/chat",
 							"host": [
-								"34",
-								"126",
-								"179",
-								"215"
+								"{{HOST}}"
 							],
-							"port": "22333",
 							"path": [
 								"chat"
 							]
@@ -112,6 +107,58 @@
 					],
 					"cookie": [],
 					"body": "Doloribus fugit rem ut magni eligendi, inventore facere delectus asperiores ratione beatae commodi distinctio vero tenetur quasi, consectetur est labore voluptas tempore delectus, quaerat dolore sapiente numquam excepturi. Reiciendis unde animi debitis ab quam laudantium eligendi, similique ab voluptatum id in obcaecati numquam, earum expedita dicta porro qui in voluptatem, quia nemo eius minus adipisci nihil iste illum. Minima facere eligendi repellendus, impedit labore aperiam doloribus, laboriosam tempora sapiente cupiditate assumenda natus nam nesciunt illum accusantium?"
+				},
+				{
+					"name": "/chat ftopenaimodel",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"m\": \"What is Tech JDI?\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/chat",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"chat"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.2 Python/3.11.9"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 Apr 2024 02:57:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "238"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"r\": \"Tech JDI is a Leading Technology and Software Solution Provider.\\n\\nWe are the specialized division of JDI Group, working with our clients and partners to build and scale their disruptive innovation with strategic resources.\"\n}"
 				}
 			]
 		}
